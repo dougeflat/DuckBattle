@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 57d4937fdee2b43d39e08a19377e3022
+timeCreated: 1446993671
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - duck: {instanceID: 0}
+  - duckClone: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
