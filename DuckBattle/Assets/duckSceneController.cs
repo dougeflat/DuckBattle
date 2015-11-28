@@ -46,6 +46,6 @@ public class duckSceneController : MonoBehaviour {
 	}
 
 	void GameOver () {
-
+		Application.LoadLevel (0);
 	}
 }
