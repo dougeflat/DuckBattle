@@ -1,4 +1,5 @@
 ﻿// Handle Cannonball Movement
+
 using UnityEngine;
 using System.Collections;
 
@@ -17,6 +18,7 @@ public class CannonBallHandler : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Duck") {
 			Destroy (other.gameObject);
+			duckSceneController.score += 1;
 		}
 	}
 	

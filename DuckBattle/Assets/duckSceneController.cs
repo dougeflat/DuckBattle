@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿// Control main game scene
+
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -6,19 +8,20 @@ public class duckSceneController : MonoBehaviour {
 	public GameObject duck;
 	public GameObject duckClone;
 	private int frameCounter = 0;
-	public int score = 0;
+	public static int score = 0;
 	private float timeLeft = 30;
 	public Text timeDisplay;
+	public Text scoreDisplay;
 
 	void Start () {
-//		timeDisplay = GameObject.Find ("Timer");
-//		GameObject.Find ("Timer").GUIText.text = timeLeft.ToString();
-		timeDisplay.text = timeLeft.ToString();
+		scoreDisplay.text = "Score: 0";
+		timeDisplay.text = "Time: " + timeLeft.ToString();
 		InvokeRepeating ("Countdown", 1.0f, 1.0f);
 	}
 	
 	void Update () {
 		LaunchDucks ();
+		scoreDisplay.text = "Score: " + score;
 	}
 
 	void LaunchDucks () {
@@ -39,7 +42,7 @@ public class duckSceneController : MonoBehaviour {
 			CancelInvoke ("Countdown");
 			GameOver ();
 		}
-		timeDisplay.text = timeLeft.ToString();
+		timeDisplay.text = "Time: " + timeLeft.ToString();
 	}
 
 	void GameOver () {
